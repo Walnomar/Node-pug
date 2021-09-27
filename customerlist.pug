@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title customers 
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
+  body.color.color-red 
+    div
+      a(href='/addcustomer').btn.btn-primary.btn-large Add customer 
+    hr  
+    div
+      table.table.table-dark 
+        tbody
+          thead 
+            tr.color-lightgrey 
+              th # 
+              th Firstname 
+              th Lastname
+              th Email
+              th Phone 
+          each customer in customers 
+            tr
+              td #{customer.number}
+              td #{customer.firstname}
+              td #{customer.lastname}
+              td #{customer.email}
+              td #{customer.phone}
